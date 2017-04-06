@@ -7,3 +7,6 @@ chown -R vagrant:vagrant /home/vagrant/.ssh
 
 echo 'Vagrant authorized_keys:'
 cat /home/vagrant/.ssh/authorized_keys
+
+### Add /usr/local/bin
+echo 'Defaults    secure_path = /sbin:/bin:/usr/sbin:/usr/bin:/usr/local/bin' >> /etc/sudoers.d/vagrant

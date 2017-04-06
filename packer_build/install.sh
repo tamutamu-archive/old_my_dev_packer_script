@@ -9,6 +9,8 @@ BASEDIR=/var/packer_build
 
 ### common develop
 (cd $BASEDIR/common-dev && ./common-dev.sh)
+(cd $BASEDIR/vim && ./vim.sh)
+(cd $BASEDIR/sphinx && ./sphinx.sh)
 
 
 ### Java(6,7,8), Maven, Gradle

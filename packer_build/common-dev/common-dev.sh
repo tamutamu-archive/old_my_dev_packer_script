@@ -6,12 +6,16 @@ CURDIR=$(cd $(dirname $0); pwd)
 
 
 ### Settings
-yum -y install wget vim
+yum -y install wget
 wget http://ftp-srv2.kddilabs.jp/Linux/distributions/fedora/epel/7/x86_64/e/epel-release-7-9.noarch.rpm -P /tmp/
 yum -y localinstall /tmp/epel-release-7-9.noarch.rpm
 yum -y update
 ln -fs /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
 rm -f /root/.ssh/authorized_keys
+
+
+### Bash Settings
+\cp -f ./conf/z_env_bash.sh /etc/profile.d/
 
 
 ### Common Dev tools

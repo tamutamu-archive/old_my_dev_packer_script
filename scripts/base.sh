@@ -14,9 +14,6 @@ setenforce 0
 systemctl stop firewalld
 systemctl disable firewalld
 
-env
-echo $HTTP_PROXY
-
 
 ### Yum Update
 
@@ -71,6 +68,11 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
 EOT
 
 
+yum -y install epel-release
+
 yum clean all
 yum clean metadata
 yum -y update
+
+
+yum -y install gcc make gcc-c++ perl zip unzip bzip2 wget

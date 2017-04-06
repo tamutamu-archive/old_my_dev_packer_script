@@ -17,7 +17,8 @@
             "scripts/vagrant.sh",
             "scripts/virtualbox.sh",
             "scripts/cleanup.sh",
-            "scripts/zerodisk.sh"
+            "scripts/zerodisk.sh",
+            "scripts/provision.sh"
           ]
         }
       }
@@ -43,7 +44,7 @@
       "boot_wait": "10s",
       "disk_size": 20520,
       "guest_os_type": "RedHat_64",
-      "headless": false,
+      "headless": true,
       "http_directory": "http",
       "iso_checksum": "{{user `iso_checksum`}}",
       "iso_checksum_type": "md5",

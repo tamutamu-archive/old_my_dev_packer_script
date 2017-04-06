@@ -1,2 +1,3 @@
 packer_cache/
+scripts/proxy.sh
 **/*.log
