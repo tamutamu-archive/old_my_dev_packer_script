@@ -14,6 +14,8 @@ yum -y update
 ln -fs /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
 rm -f /root/.ssh/authorized_keys
 
+echo 'set completion-ignore-case on' >> /etc/inputrc
+
 
 ### Bash Settings
 \cp -f ./conf/z_env_bash.sh /etc/profile.d/
