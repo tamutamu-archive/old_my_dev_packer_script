@@ -1,9 +1,16 @@
+#!/bin/bash
+set -euo pipefail
+
+echo "Install Ruby." 
+
 CURDIR=$(cd $(dirname $0); pwd)
+. ./var.conf
+
 
 yum install -y gcc-c++ patch readline readline-devel zlib zlib-devel \
                libcurl-devel ImageMagick ImageMagick-devel libyaml-devel \
                libffi-devel openssl-devel make bzip2 autoconf automake libtool bison
-               
+
 
 if [ ! $(which git) ]; then
   echo "Git is not installed."

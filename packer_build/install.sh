@@ -11,6 +11,7 @@ BASEDIR=/var/packer_build
 (cd $BASEDIR/common-dev && ./common-dev.sh)
 (cd $BASEDIR/vim && ./vim.sh)
 (cd $BASEDIR/sphinx && ./sphinx.sh)
+(cd $BASEDIR/aws && ./aws.sh)
 
 
 ### Java(6,7,8), Maven, Gradle
@@ -22,3 +23,6 @@ BASEDIR=/var/packer_build
 ### Apache 
 (cd $BASEDIR/apache && ./apache.sh)
 
+
+### Ruby
+(cd $BASEDIR/ruby && ./ruby.sh)

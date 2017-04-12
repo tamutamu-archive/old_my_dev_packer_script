@@ -32,7 +32,6 @@ sh /tmp/installer.sh ~/.cache/dein | awk '/"dein/,/"End/' > /root/.vim/.vim.d/90
 ### Config
 echo 'alias vi=vim' >> /root/.bashrc
 
-git clone https://github.com/tamutamu/my_dev_settings.git /root/my_dev_settings
 \cp -f /root/my_dev_settings/vim/.vimrc /root/
 \cp -rf /root/my_dev_settings/vim/.vim/.vim.d/ /root/.vim/
 
