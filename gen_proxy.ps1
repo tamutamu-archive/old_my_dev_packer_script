@@ -1,6 +1,10 @@
 $PROXY_HOST=""
 $PROXY_PORT=""
 
+$code=""
+
+if (!($PROXY_HOST -eq "")) {
+
 $code = @"
 export http_proxy=http://${PROXY_HOST}:${PROXY_PORT}
 
@@ -14,5 +18,7 @@ export HTTP_PROXY=${http_proxy}
 export HTTPS_PROXY=${http_proxy}
 EOT
 '@
+
+}
 
 [IO.File]::WriteAllText('scripts/proxy.sh',${code});

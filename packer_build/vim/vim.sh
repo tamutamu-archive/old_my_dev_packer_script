@@ -35,3 +35,8 @@ echo 'alias vi=vim' >> /root/.bashrc
 \cp -f /root/my_dev_settings/vim/.vimrc /root/
 \cp -rf /root/my_dev_settings/vim/.vim/.vim.d/ /root/.vim/
 
+
+### dein plugin install.
+set +e
+yes | vim -c ":silent! call dein#install() | :q"
+set -e
