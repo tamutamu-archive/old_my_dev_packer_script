@@ -50,3 +50,7 @@ git clone https://github.com/tamutamu/my_dev_settings.git /root/my_dev_settings
 \cp -f /root/my_dev_settings/git/.gitconfig /root/
 
 
+### Util Scripts
+mkdir -p /opt/scripts
+\cp -rf ./conf/gpg /opt/scripts/
+
