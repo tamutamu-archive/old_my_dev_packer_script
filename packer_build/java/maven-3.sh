@@ -19,7 +19,7 @@ EOT
 . /etc/profile.d/maven3.sh 
 popd
 
-
+set +eu
 if [ ! -z "$http_proxy" ]; then
    proxy_host=$(echo $http_proxy | awk '{sub("^http.*://","");sub(":[0-9]*","");print $0}')
    proxy_port=$(echo $http_proxy | awk '{sub("^http.*:","");print $0}')
@@ -35,5 +35,5 @@ if [ ! -z "$http_proxy" ]; then
      > /root/.m2/settings.xml.tmp
 
    mv /root/.m2/settings.xml.tmp /root/.m2/settings.xml
-
 fi
+set -eu
