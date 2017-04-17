@@ -26,3 +26,7 @@ BASEDIR=/var/packer_build
 
 ### Ruby
 (cd $BASEDIR/ruby && ./ruby.sh)
+
+
+### My Develop Settings
+(cd $BASEDIR/my_dev && ./my_dev.sh)
