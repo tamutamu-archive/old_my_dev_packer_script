@@ -13,3 +13,6 @@ mkdir /var/exports
 echo '/var/exports  *(rw,all_squash,fsid=0,crossmnt)' >> /etc/exports
 exportfs -r
 exportfs -v
+
+systemctl enable nfs-server
+systemctl restart nfs-server
