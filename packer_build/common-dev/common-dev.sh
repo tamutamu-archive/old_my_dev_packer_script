@@ -36,6 +36,8 @@ make prefix=/usr/local all
 make prefix=/usr/local install
 popd
 
+git config --global credential.helper store
+
 pushd /tmp/
 git clone https://github.com/jonas/tig.git
 cd tig
