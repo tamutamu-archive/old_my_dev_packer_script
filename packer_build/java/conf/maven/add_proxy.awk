@@ -29,8 +29,6 @@ BEGIN{
     print "        <nonProxyHosts></nonProxyHosts>"
     print "      </proxy>"
 
-
-    print "</proxies>"
   }
  
   {
