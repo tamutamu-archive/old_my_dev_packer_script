@@ -39,6 +39,8 @@ popd
 # Git config.
 git config --global credential.helper store
 git config --global core.autoCRLF false
+git config --global core.quotepath false
+
 
 pushd /tmp/
 git clone https://github.com/jonas/tig.git
