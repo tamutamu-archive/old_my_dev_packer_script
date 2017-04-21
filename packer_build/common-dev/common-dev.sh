@@ -51,6 +51,10 @@ make && make install
 popd
 
 
+### For smb share folder.
+yum -y install cifs-utils
+
+
 ### Util Scripts
 mkdir -p /opt/scripts
 \cp -rf ./conf/gpg /opt/scripts/
