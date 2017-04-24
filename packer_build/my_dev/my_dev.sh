@@ -34,15 +34,10 @@ fi
 mkdir -p ~/.cache/dein
 
 curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh -o /tmp/installer.sh
-sh /tmp/installer.sh ~/.cache/dein | awk '/"dein/,/"End/' > /root/.vim/.vim.d/90-dein.vim
+sh /tmp/installer.sh ~/.cache/dein | awk '/"dein/,/"End/' > /root/.vim/my_dein.vim
 
 ### dein plugin install.
 set +e
 yes | vim -c ":silent! call dein#install() | :q"
 set -e
 
-
-### Copy me to /opt/scripts/...
-if [ "${0}" != "/opt/scripts/my_dev/$(basename ${0})" ]; then
-  \cp -f ${0} /opt/scripts/my_dev/
-fi
