@@ -21,9 +21,7 @@ fi
 # Config
 echo 'alias vi=vim' >> /root/.bashrc
 
-pushd /opt/scripts/my_dev/my_dev_settings/vim/
-\cp -rf . /root/
-popd
+\cp -f /opt/scripts/my_dev/my_dev_settings/vim/.vimrc /root/
 
 
 # Install dein.
@@ -41,3 +39,21 @@ set +e
 yes | vim -c ":silent! call dein#install() | :q"
 set -e
 
+
+### Desktop
+yum -y install ibus-kkc vlgothic-* ipa-gothic-fonts ipa-mincho-fonts ipa-pgothic-fonts ipa-pmincho-fonts
+localectl set-locale LANG=ja_JP.UTF-8
+source /etc/locale.conf
+
+yum -y groupinstall "X Window System" "Japanese Support" mate-desktop "Input Methods"
+
+cat << EOT >> ~/.xinitrc
+export GTK_IM_MODULE=xim
+export XMODIFIERS=@im=ibus
+export QT_IM_MODULE=ibus
+
+ibus-daemon -drx
+sleep 2
+
+exec mate-session
+EOT

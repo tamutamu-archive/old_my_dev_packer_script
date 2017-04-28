@@ -19,3 +19,5 @@ ln -s /usr/local/bin/vim /bin/vim
 
 pushd
 
+# just in case..
+mkdir -p /root/.vim

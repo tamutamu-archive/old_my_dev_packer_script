@@ -50,6 +50,8 @@ cd tig
 make && make install
 popd
 
+yum -y install meld
+
 
 ### For smb share folder.
 yum -y install cifs-utils
@@ -59,3 +61,16 @@ yum -y install cifs-utils
 mkdir -p /opt/scripts
 \cp -rf ./conf/gpg /opt/scripts/
 
+
+### Google Chrome
+cat << EOT > /etc/yum.repos.d/google-chrome.repo
+[google-chrome]
+name=google-chrome
+baseurl=http://dl.google.com/linux/chrome/rpm/stable/$basearch
+enabled=1
+gpgcheck=1
+gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub
+EOT
+
+yum -y install google-chrome-stable
+sed -i.bak 's#exec -a "$0" "$HERE/chrome"  "$@"#exec -a "$0" "$HERE/chrome" "$@" --no-sandbox --user-data-dir=~#' /opt/google/chrome/google-chrome

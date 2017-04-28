@@ -8,8 +8,20 @@ Vagrant.configure("2") do |config|
   config.vm.synced_folder "C:/R", "/r", type: "smb", smb_username: "<your name>", smb_password: "<your password>"
 
   config.vm.provider "virtualbox" do |vb|
-    vb.gui = false
-    vb.memory = "500"
+    vb.gui = true
+	  vb.customize [
+	    "modifyvm", :id,
+	    "--clipboard", "bidirectional",
+	    "--memory", "700",
+	    "--vram", "64",
+	    "--accelerate3d", "on",
+	    "--accelerate2dvideo", "on",
+	    "--hwvirtex", "on",
+	    "--nestedpaging", "on",
+	    "--largepages", "on",
+	    "--ioapic", "on",
+	    "--pae", "on",
+	  ]
   end
 
 end
