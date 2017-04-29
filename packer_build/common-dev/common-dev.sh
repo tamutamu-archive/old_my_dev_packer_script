@@ -58,7 +58,7 @@ mkdir -p /opt/scripts
 
 
 ### Google Chrome
-cat << EOT > /etc/yum.repos.d/google-chrome.repo
+cat << 'EOT' > /etc/yum.repos.d/google-chrome.repo
 [google-chrome]
 name=google-chrome
 baseurl=http://dl.google.com/linux/chrome/rpm/stable/$basearch
