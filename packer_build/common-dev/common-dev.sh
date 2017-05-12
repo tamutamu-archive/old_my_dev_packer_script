@@ -14,6 +14,9 @@ yum -y update
 ln -fs /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
 rm -f /root/.ssh/authorized_keys
 
+# Man page for japanese.
+yum -y install man-pages-ja
+
 echo 'set completion-ignore-case on' >> /etc/inputrc
 
 
