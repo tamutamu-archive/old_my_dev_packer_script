@@ -9,7 +9,6 @@ BASEDIR=/var/packer_build
 
 ### common develop
 (cd $BASEDIR/common-dev && ./common-dev.sh)
-(cd $BASEDIR/vim && ./vim.sh)
 (cd $BASEDIR/sphinx && ./sphinx.sh)
 (cd $BASEDIR/aws && ./aws.sh)
 

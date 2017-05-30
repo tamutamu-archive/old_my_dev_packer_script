@@ -6,25 +6,21 @@ CURDIR=$(cd $(dirname $0); pwd)
 
 
 ## Oracle JDK6
-pushd /tmp
-curl -v -j -k -L -H "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/6u45-b06/jdk-6u45-linux-x64-rpm.bin > jdk-6u45-linux-x64-rpm.bin
+pushd ./install-file
 chmod +x jdk-6u45-linux-x64-rpm.bin
 ./jdk-6u45-linux-x64-rpm.bin
 popd
 
 
 ## Oracle JDK7
-pushd /tmp
-curl -v -j -k -L -H "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/7u80-b15/jdk-7u80-linux-x64.tar.gz > jdk-7u80-linux-x64.tar.gz
+pushd ./install-file
 tar -zxf  jdk-7u80-linux-x64.tar.gz
 mv jdk1.7.0_80/ /usr/java/
-
 popd
 
 
 ## Oracle JDK8
-pushd /tmp
-curl -v -j -k -L -H "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u112-b15/jdk-8u112-linux-x64.tar.gz > jdk-8u112-linux-x64.tar.gz
+pushd ./install-file
 tar -zxf  jdk-8u112-linux-x64.tar.gz
 mv jdk1.8.0_112 /usr/java/
 popd

@@ -12,48 +12,5 @@ else
   git clone https://github.com/tamutamu/my_dev_settings.git /opt/scripts/my_dev/my_dev_settings
 fi
 
-
-### Update Git settings.
-\cp -f /opt/scripts/my_dev/my_dev_settings/git/.gitconfig /root/
-
-
-### Update Vim settings.
-# Config
-echo 'alias vi=vim' >> /root/.bashrc
-
-\cp -f /opt/scripts/my_dev/my_dev_settings/vim/.vimrc /root/
-
-
-# Install dein.
-if [ -e ~/.cache/dein ]; then
-  rm -rf ~/.cache/dein
-fi
-
-mkdir -p ~/.cache/dein
-
-curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh -o /tmp/installer.sh
-sh /tmp/installer.sh ~/.cache/dein | awk '/"dein/,/"End/' > /root/.vim/my_dein.vim
-
-### dein plugin install.
-set +e
-yes | vim -c ":silent! call dein#install() | :q"
-set -e
-
-
-### Desktop
-yum -y install ibus-kkc vlgothic-* ipa-gothic-fonts ipa-mincho-fonts ipa-pgothic-fonts ipa-pmincho-fonts
-localectl set-locale LANG=ja_JP.UTF-8
-source /etc/locale.conf
-
-yum -y groupinstall "X Window System" "Japanese Support" mate-desktop "Input Methods"
-
-cat << EOT >> ~/.xinitrc
-export GTK_IM_MODULE=xim
-export XMODIFIERS=@im=ibus
-export QT_IM_MODULE=ibus
-
-ibus-daemon -drx
-sleep 2
-
-exec mate-session
-EOT
+chmod +x /opt/scripts/my_dev/my_dev_settings/dev_install.sh
+/opt/scripts/my_dev/my_dev_settings/dev_install.sh
