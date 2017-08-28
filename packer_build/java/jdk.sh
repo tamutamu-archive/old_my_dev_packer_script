@@ -21,15 +21,15 @@ popd
 
 ## Oracle JDK8
 pushd ./install-file
-tar -zxf  jdk-8u112-linux-x64.tar.gz
-mv jdk1.8.0_112 /usr/java/
+tar -zxf  jdk-8u144-linux-x64.tar.gz
+mv jdk1.8.0_144 /usr/java/
 popd
 
 
 ## Setting alternatives
 alternatives --install /usr/java/latest java /usr/java/jdk1.6.0_45 6
 alternatives --install /usr/java/latest java /usr/java/jdk1.7.0_80 7
-alternatives --install /usr/java/latest java /usr/java/jdk1.8.0_112 8
+alternatives --install /usr/java/latest java /usr/java/jdk1.8.0_144 8
 
 
 ## Setting JAVA_HOME

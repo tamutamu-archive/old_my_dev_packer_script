@@ -7,9 +7,8 @@ CURDIR=$(cd $(dirname $0); pwd)
 
 ### Settings, etc..
 yum -y install wget git
-wget http://ftp-srv2.kddilabs.jp/Linux/distributions/fedora/epel/7/x86_64/e/epel-release-7-9.noarch.rpm -P /tmp/
+yum -y install epel-release
 
-yum -y localinstall /tmp/epel-release-7-9.noarch.rpm
 yum -y update
 ln -fs /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
 rm -f /root/.ssh/authorized_keys
