@@ -41,8 +41,8 @@ localectl set-locale LANG=ja_JP.UTF-8
 source /etc/locale.conf
 
 
-### mate
-yum -y groupinstall "X Window System" "Japanese Support" mate-desktop "Input Methods"
+### lxqt
+yum -y groupinstall "X Window System" "Japanese Support" lxqt* "Input Methods"
 
 cat << EOT >> ~/.xinitrc
 export GTK_IM_MODULE=xim
@@ -52,7 +52,7 @@ export QT_IM_MODULE=ibus
 ibus-daemon -drx
 sleep 2
 
-exec mate-session
+startlxqt
 EOT
 
 
