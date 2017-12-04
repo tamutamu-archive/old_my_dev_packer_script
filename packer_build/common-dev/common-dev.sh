@@ -11,7 +11,12 @@ yum -y install epel-release
 
 yum -y update
 ln -fs /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
+
+
+# ssh config
 rm -f /root/.ssh/authorized_keys
+echo 'UseDNS no' >> /etc/ssh/sshd_config
+
 
 echo 'set completion-ignore-case on' >> /etc/inputrc
 
