@@ -12,5 +12,6 @@ pushd mod_python
 make && make install
 popd
 
+echo 'PYTHONPATH=/usr/lib64/python2.7/site-packages/' >> /etc/sysconfig/httpd
 
 popd
