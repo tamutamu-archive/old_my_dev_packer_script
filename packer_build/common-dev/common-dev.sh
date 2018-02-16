@@ -48,13 +48,13 @@ source /etc/locale.conf
 
 ### mate
 yum -y groupinstall "X Window System" "Japanese Support" mate-desktop"Input Methods"
+yum install -y fcitx fcitx-configtool fcitx-anthy im-chooser
+### startx && im-chooser, set fcitx.
 
 cat << EOT >> ~/.xinitrc
-export GTK_IM_MODULE=ibus
-export XMODIFIERS=@im=ibus
-export QT_IM_MODULE=ibus
-
-ibus-daemon -drx
+export GTK_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
+export QT_IM_MODULE=fcitx
 
 exec mate-session
 EOT
