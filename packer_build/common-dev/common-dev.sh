@@ -37,3 +37,6 @@ yum -y install cifs-utils
 mkdir -p /opt/scripts
 \cp -rf ./conf/gpg /opt/scripts/
 
+
+### Desktop Dev
+./desktop.sh

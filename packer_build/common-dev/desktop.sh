@@ -1,15 +1,22 @@
 #!/bin/bash
 set -euo pipefail
 
+CURDIR=$(cd $(dirname $0); pwd)
+
 
 ### plasma desktop
 localedef -f UTF-8 -i ja_JP ja_JP.UTF-8
 localectl set-locale LANG=ja_JP.UTF-8
 source /etc/locale.conf
 
+
 yum groupinstall "KDE Plasma Workspaces" -y
 yum -y install kde-l10n-Japanese notify-python
 yum install ibus-kkc ipa-gothic-fonts ipa-mincho-fonts ipa-pgothic-fonts ipa-pmincho-fonts -y
+
+# Set my kde plasma config.
+rm -rf /root/.kde
+ln -s ${CURDIR}/conf/.kde /root/.kde
 
 cat << EOT >> /root/.xinitrc
 export GTK_IM_MODULE=ibus
@@ -19,17 +26,6 @@ ibus-daemon -drx
 
 exec startkde
 EOT
-
-### gtkparasite
-yum -y install gnome-common gtk3* gtksourceview3*
-git clone https://github.com/chipx86/gtkparasite
-pushd gtkparasite
-./autogen.sh --with-gtk=3.0 --libdir=/usr/lib64
-make && make install
-popd
-
-### Terminal
-yum -y install terminator
 
 
 #### mate
