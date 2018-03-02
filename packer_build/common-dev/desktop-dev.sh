@@ -18,6 +18,8 @@ yum -y install terminator
 
 
 ### eclipse
+yum -y install libwebkitgtk*
+
 pushd /tmp
 wget http://ftp.jaist.ac.jp/pub/eclipse/technology/epp/downloads/release/oxygen/2/eclipse-java-oxygen-2-linux-gtk-x86_64.tar.gz
 tar zxf eclipse-java-oxygen-2-linux-gtk-x86_64.tar.gz

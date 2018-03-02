@@ -7,7 +7,7 @@ Style=InApplication
 [General]
 XftHintStyle=hintfull
 XftSubPixel=rgb
-widgetStyle=plastique
+widgetStyle=oxygen
 
 [KDE]
 ShowIconsInMenuItems=true
