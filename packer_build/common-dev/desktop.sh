@@ -11,7 +11,6 @@ yum groupinstall "KDE Plasma Workspaces" -y
 yum -y install kde-l10n-Japanese notify-python
 yum install ibus-kkc ipa-gothic-fonts ipa-mincho-fonts ipa-pgothic-fonts ipa-pmincho-fonts -y
 
-
 cat << EOT >> /root/.xinitrc
 export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
@@ -20,6 +19,16 @@ ibus-daemon -drx
 
 exec startkde
 EOT
+
+
+### gtkparasite
+git clone https://github.com/chipx86/gtkparasite
+pushd gtkparasite
+./autogen.sh --with-gtk=3.0 --libdir=/usr/lib64
+make && make install
+popd
+
+
 
 #### mate
 #yum -y groupinstall "X Window System" "Japanese Support" mate-desktop"Input Methods"
