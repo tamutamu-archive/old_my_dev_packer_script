@@ -2,6 +2,8 @@
 set -euo pipefail
 
 
+CURDIR=$(cd $(dirname $0); pwd)
+
 ### gtkparasite
 yum -y install gnome-common gtk3* gtksourceview3*
 git clone https://github.com/chipx86/gtkparasite
@@ -36,3 +38,4 @@ make install
 popd
 popd
 
+ln -s ${CURDIR}/conf/copyq /root/.config/copyq
