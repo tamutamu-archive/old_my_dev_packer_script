@@ -166,7 +166,7 @@ zvalue=0
 
 [Containments][1][Applets][6][Configuration][Applets][2][PopupApplet]
 DialogHeight=264
-DialogWidth=744
+DialogWidth=730
 
 [Containments][1][Applets][6][Configuration][Applets][8]
 plugin=notifications
