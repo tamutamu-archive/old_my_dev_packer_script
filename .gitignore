@@ -3,3 +3,5 @@ scripts/proxy.sh
 **/*.log
 packer_build/java/install-file/*.*
 **/kwallet*
+**/copyq.pub
+**/copyq.sec
