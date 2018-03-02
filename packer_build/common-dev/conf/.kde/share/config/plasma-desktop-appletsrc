@@ -4,6 +4,7 @@ RightButton;NoModifier=contextmenu
 wheel:Vertical;NoModifier=switchdesktop
 
 [AppletGlobals][plasma_applet_launcher]
+com.github.hluk.copyq=2018-03-02
 emacs=
 emacsclient=
 firefox=
@@ -59,6 +60,8 @@ kde4-systemsettings=
 policyeditor=
 qt4-designer=
 qt4-linguist=
+qt5-designer=2018-03-02
+qt5-linguist=2018-03-02
 setroubleshoot=
 system-config-date=
 system-config-printer=
@@ -116,7 +119,7 @@ hideWhenSingleDesktop=true
 Order=2
 
 [Containments][1][Applets][5]
-geometry=62,2,1670,25
+geometry=62,2,1642,25
 immutability=1
 plugin=tasks
 zvalue=0
@@ -125,7 +128,7 @@ zvalue=0
 Order=3
 
 [Containments][1][Applets][6]
-geometry=1736,2,106,25
+geometry=1708,2,134,25
 immutability=1
 plugin=systemtray
 zvalue=0
@@ -235,7 +238,7 @@ hideWhenSingleDesktop=true
 Order=2
 
 [Containments][13][Applets][17]
-geometry=62,0,1642,25
+geometry=62,0,1614,25
 immutability=1
 plugin=tasks
 zvalue=0
@@ -244,7 +247,7 @@ zvalue=0
 Order=3
 
 [Containments][13][Applets][18]
-geometry=1708,0,134,25
+geometry=1680,0,162,25
 immutability=1
 plugin=systemtray
 zvalue=0

@@ -2,3 +2,4 @@ packer_cache/
 scripts/proxy.sh
 **/*.log
 packer_build/java/install-file/*.*
+**/kwallet*

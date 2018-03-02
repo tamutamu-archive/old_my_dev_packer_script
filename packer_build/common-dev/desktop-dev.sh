@@ -22,3 +22,17 @@ tar zxf eclipse-java-oxygen-2-linux-gtk-x86_64.tar.gz
 mv ./eclipse /var/
 sed -i:bk -e 's/--launcher.appendVmargs/--launcher.GTK_version\n2\n--launcher.appendVmargs/' /var/eclipse/eclipse.ini
 popd
+
+
+### CopyQ
+yum install gcc-c++ git cmake qt5-qtbase-devel qt5-qtsvg-devel qt5-qttools-devel qt5-qtscript-devel
+
+pushd /tmp
+git clone https://github.com/hluk/CopyQ.git
+pushd CopyQ
+cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr/local .
+make
+make install
+popd
+popd
+
