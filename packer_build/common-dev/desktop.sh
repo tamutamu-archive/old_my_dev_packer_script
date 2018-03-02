@@ -20,7 +20,6 @@ ibus-daemon -drx
 exec startkde
 EOT
 
-
 ### gtkparasite
 yum -y install gnome-common gtk3* gtksourceview3*
 git clone https://github.com/chipx86/gtkparasite
@@ -29,6 +28,8 @@ pushd gtkparasite
 make && make install
 popd
 
+### Terminal
+yum -y install terminator
 
 
 #### mate
