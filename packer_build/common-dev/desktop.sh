@@ -22,7 +22,7 @@ EOT
 
 
 ### gtkparasite
-yum -y install gnome-common
+yum -y install gnome-common gtk3* gtksourceview3*
 git clone https://github.com/chipx86/gtkparasite
 pushd gtkparasite
 ./autogen.sh --with-gtk=3.0 --libdir=/usr/lib64
