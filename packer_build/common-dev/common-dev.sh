@@ -40,3 +40,4 @@ mkdir -p /opt/scripts
 
 ### Desktop Dev
 ./desktop.sh
+./desktop-dev.sh
