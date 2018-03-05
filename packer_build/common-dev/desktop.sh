@@ -14,9 +14,6 @@ yum groupinstall "KDE Plasma Workspaces" -y
 yum -y install kde-l10n-Japanese notify-python
 yum install ibus-kkc ipa-gothic-fonts ipa-mincho-fonts ipa-pgothic-fonts ipa-pmincho-fonts -y
 
-# Set my kde plasma config.
-rm -rf /root/.kde
-ln -s ${CURDIR}/conf/.kde /root/.kde
 
 cat << EOT >> /root/.xinitrc
 export GTK_IM_MODULE=ibus
