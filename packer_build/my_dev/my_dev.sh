@@ -15,6 +15,7 @@ fi
 chmod +x /opt/scripts/my_dev/my_dev_settings/dev_install.sh
 /opt/scripts/my_dev/my_dev_settings/dev_install.sh
 
+rcvboxadd setup
 
 
 ### My Shell Scripts

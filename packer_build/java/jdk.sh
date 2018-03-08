@@ -27,9 +27,11 @@ popd
 
 
 ## Setting alternatives
+set +e
 alternatives --install /usr/java/latest java /usr/java/jdk1.6.0_45 6
 alternatives --install /usr/java/latest java /usr/java/jdk1.7.0_80 7
 alternatives --install /usr/java/latest java /usr/java/jdk1.8.0_144 8
+set -e
 
 
 ## Setting JAVA_HOME
@@ -41,7 +43,6 @@ EOT
 
 
 ## Copy change Java version script
-mkdir /opt/scripts/java
+mkdir -p /opt/scripts/java
 cp $CURDIR/conf/ch_java.sh /opt/scripts/java/
 chmod a+x /opt/scripts/java/ch_java.sh
-

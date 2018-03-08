@@ -26,7 +26,7 @@ yum -y install man-pages-ja
 
 ### Common Dev tools
 yum -y groupinstall "Development Tools"
-yum -y install openssl-devel curl-devel expat-devel perl-ExtUtils-MakeMaker ncurses-devel ncurses
+yum -y install openssl-devel curl-devel expat-devel perl-ExtUtils-MakeMaker ncurses-devel ncurses nkf
 
 
 ### For smb share folder.
@@ -40,3 +40,4 @@ mkdir -p /opt/scripts
 
 ### Desktop Dev
 ./desktop.sh
+./desktop-dev.sh

@@ -29,7 +29,7 @@ popd
 
 
 ### CopyQ
-yum install gcc-c++ git cmake qt5-qtbase-devel qt5-qtsvg-devel qt5-qttools-devel qt5-qtscript-devel
+yum -y install gcc-c++ git cmake qt5-qtbase-devel qt5-qtsvg-devel qt5-qttools-devel qt5-qtscript-devel
 
 pushd /tmp
 git clone https://github.com/hluk/CopyQ.git

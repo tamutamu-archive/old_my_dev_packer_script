@@ -6,7 +6,7 @@ CURDIR=$(cd $(dirname $0); pwd)
 
 
 yum -y install epel-release
-yum -y install gcc make gcc-c++ perl zip unzip bzip2 vim wget
+yum -y install gcc make gcc-c++ perl zip unzip bzip2 vim wget yum-utils
 yum -y update
 
 
