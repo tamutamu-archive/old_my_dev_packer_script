@@ -5,3 +5,7 @@ packer_build/java/install-file/*.*
 **/kwallet*
 **/copyq.pub
 **/copyq.sec
+
+packer_build/common-dev/conf/.kde/tmp-localhost.localdomain
+packer_build/common-dev/conf/.kde/socket-localhost.localdomain
+packer_build/common-dev/conf/.kde/cache-localhost.localdomain

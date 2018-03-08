@@ -1,6 +1,0 @@
-[Desktop Entry]
-Icon=text-plain
-Name=eclipse.ini
-Type=Link
-URL[$e]=file:///var/eclipse/eclipse.ini
-X-KDE-LastOpenedWith=kwrite
