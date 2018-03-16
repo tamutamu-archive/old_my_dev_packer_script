@@ -14,7 +14,6 @@ ln -fs /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
 
 
 # ssh config
-rm -f /root/.ssh/authorized_keys
 echo 'UseDNS no' >> /etc/ssh/sshd_config
 
 
